@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://vugapublishing.com/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vugapublishing.com/assets/images/brand/logo.png</image:loc>
+      <image:title>VUGA Publishing</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/our-story.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/catalog.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/contact.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/for-authors.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/books/emma-luke.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://vugapublishing.com/assets/images/books/emma-luke-cover.jpg</image:loc>
+      <image:title>Emma + Luke = Disappear to Nowhere</image:title>
+      <image:caption>Sci-Fi Adventure for Kids by Victoria Unikel</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/books/how-trump-played-the-media.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vugapublishing.com/assets/images/books/trump-cover.webp</image:loc>
+      <image:title>How Trump Played the Media... Again</image:title>
+      <image:caption>Political non-fiction by Gene Avakyan</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/books/law-firm-marketing-bible.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
