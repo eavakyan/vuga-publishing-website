@@ -10,7 +10,7 @@
   --c-black:#0a0a0a;
   --c-ink:#1a1a1a;
   --c-body:#3a3a3a;
-  --c-muted:#7a7a7a;
+  --c-muted:#595959;
   --c-border:#e6e6e6;
   --c-bg:#ffffff;
   --c-bg-alt:#f7f5f1;
@@ -38,9 +38,12 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 img{max-width:100%;height:auto;display:block}
-a{color:var(--c-red);text-decoration:none;transition:color var(--t-fast)}
-a:hover{color:var(--c-red-dark)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--c-red);outline-offset:3px;border-radius:2px}
+a{color:var(--c-red-dark);text-decoration:none;transition:color var(--t-fast)}
+a:hover{color:var(--c-red)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--c-red-dark);outline-offset:3px;border-radius:2px}
+.btn:focus-visible{outline-color:#fff;box-shadow:0 0 0 4px var(--c-black)}
+.btn--ghost:focus-visible{outline-color:var(--c-red-dark);box-shadow:none}
+main:focus{outline:none}
 
 /* ----- Typography ----- */
 h1,h2,h3,h4,h5,h6{
@@ -62,7 +65,7 @@ p{margin:0 0 1.1em}
   text-transform:uppercase;
   letter-spacing:3px;
   font-size:.78rem;
-  color:var(--c-red);
+  color:var(--c-red-dark);
   margin-bottom:1rem;
   padding:.4rem .8rem;
   border:1px solid var(--c-red);
@@ -136,9 +139,9 @@ p{margin:0 0 1.1em}
   content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--c-red);
   transition:width var(--t-mid);
 }
-.nav a:hover{color:var(--c-red)}
+.nav a:hover{color:var(--c-red-dark)}
 .nav a:hover::after,.nav a[aria-current="page"]::after{width:100%}
-.nav a[aria-current="page"]{color:var(--c-red)}
+.nav a[aria-current="page"]{color:var(--c-red-dark)}
 
 /* Mobile menu toggle */
 .menu-toggle{
@@ -167,7 +170,8 @@ p{margin:0 0 1.1em}
   color:var(--c-ink);border-bottom:1px solid var(--c-border);
 }
 .mobile-nav a:last-child{border-bottom:0}
-.mobile-nav a:hover,.mobile-nav a[aria-current="page"]{color:var(--c-red)}
+.mobile-nav a:hover,.mobile-nav a[aria-current="page"]{color:var(--c-red-dark)}
+.menu-toggle{min-width:44px;min-height:44px;width:44px;height:44px}
 
 /* ----- Hero ----- */
 .hero{
@@ -284,7 +288,7 @@ p{margin:0 0 1.1em}
 .book-card-genre{
   font-family:'Oswald',sans-serif;
   font-size:.74rem;text-transform:uppercase;letter-spacing:2px;
-  color:var(--c-red);margin-bottom:.6rem;
+  color:var(--c-red-dark);margin-bottom:.6rem;
 }
 .book-card h3{
   font-size:1.15rem;margin-bottom:.4rem;line-height:1.25;
@@ -296,8 +300,8 @@ p{margin:0 0 1.1em}
   font-family:'Oswald',sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;
   padding:.3rem .65rem;border-radius:2px;background:var(--c-red);color:#fff;
 }
-.badge--soon{background:#cfa84e}
-.badge--free{background:#1a8b4a}
+.badge--soon{background:#8a6a14}
+.badge--free{background:#147a3e}
 
 /* ----- Retailer Grid ----- */
 .retailers{
@@ -418,7 +422,7 @@ p{margin:0 0 1.1em}
 }
 .contact-card h3{margin-bottom:1rem;font-size:1.1rem}
 .contact-card a{color:var(--c-ink);font-weight:500}
-.contact-card a:hover{color:var(--c-red)}
+.contact-card a:hover{color:var(--c-red-dark)}
 .contact-row{display:flex;gap:.8rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid var(--c-border)}
 .contact-row:last-child{border-bottom:0}
 .contact-row .label{
@@ -461,10 +465,13 @@ p{margin:0 0 1.1em}
 .footer-social svg{width:16px;height:16px;fill:currentColor}
 .footer-bottom{
   display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;
-  padding-top:1.5rem;font-size:.84rem;color:#7a7a7a;
+  padding-top:1.5rem;font-size:.84rem;color:#bdbdbd;
 }
 .footer-bottom a{color:#bdbdbd}
 .footer-bottom a:hover{color:var(--c-red)}
+.footer-legal{display:flex;flex-wrap:wrap;gap:.4rem .55rem;align-items:center}
+.footer-legal a{padding:.15rem .25rem;border-radius:2px}
+.footer-legal a[aria-current="page"]{color:#fff;text-decoration:underline}
 
 /* ----- Utility ----- */
 .text-center{text-align:center}
@@ -474,6 +481,59 @@ p{margin:0 0 1.1em}
 
 /* SR-only */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Skip link — visible on keyboard focus (WCAG 2.4.1) */
+.sr-only:focus,.sr-only:focus-visible{
+  position:fixed;top:1rem;left:1rem;
+  width:auto;height:auto;
+  padding:.85rem 1.4rem;
+  clip:auto;white-space:normal;
+  background:var(--c-black);color:#fff;
+  font-family:'Oswald',sans-serif;font-size:.95rem;
+  letter-spacing:1.5px;text-transform:uppercase;
+  border-radius:4px;z-index:9999;
+  outline:3px solid var(--c-red);outline-offset:2px;
+  text-decoration:none;
+}
+
+/* ----- Form accessibility ----- */
+.form-grid{display:grid;gap:1.1rem;margin-top:1rem}
+.form-row{display:flex;flex-direction:column;gap:.4rem}
+.form-row > label{
+  font-family:'Oswald',sans-serif;font-size:.82rem;
+  text-transform:uppercase;letter-spacing:1.2px;
+  color:var(--c-ink);font-weight:500;
+}
+.form-row .req{color:var(--c-red-dark);margin-left:.2rem}
+.form-row input,.form-row select,.form-row textarea{
+  padding:.85rem 1rem;
+  border:1px solid var(--c-border);
+  border-radius:4px;
+  font-size:1rem;font-family:inherit;color:var(--c-ink);
+  background:#fff;
+}
+.form-row textarea{resize:vertical}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{
+  outline:2px solid var(--c-red-dark);outline-offset:1px;border-color:var(--c-red-dark);
+}
+.form-row .hint{font-size:.84rem;color:var(--c-muted);margin:.2rem 0 0}
+.form-status{
+  margin-top:1rem;padding:.8rem 1.1rem;border-radius:4px;
+  font-size:.95rem;display:none;
+}
+.form-status.is-error{display:block;background:#fdeaea;border:1px solid #b62525;color:#7a1717}
+
+/* ----- Reduced motion (WCAG 2.3.3) ----- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  html{scroll-behavior:auto}
+  .book-card:hover,.book-card-cover img,.book-cover-wrap img{transform:none !important}
+}
 
 /* ----- Print ----- */
 @media print{.site-header,.site-footer,.menu-toggle,.mobile-nav{display:none}}

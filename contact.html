@@ -75,7 +75,7 @@
   </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
   <section class="page-hero">
     <div class="container">
@@ -135,30 +135,33 @@
 
       <div class="contact-card" style="margin-top:2rem">
         <h3>Send a Message</h3>
-        <p>Use the form below to email us directly. We aim to respond within 2 business days.</p>
-        <form action="mailto:info@vugapublishing.com" method="post" enctype="text/plain" style="display:grid;gap:1rem;margin-top:1rem">
-          <label style="display:flex;flex-direction:column;gap:.4rem">
-            <span style="font-family:'Oswald',sans-serif;font-size:.82rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--c-muted)">Your Name</span>
-            <input type="text" name="name" required style="padding:.85rem 1rem;border:1px solid var(--c-border);border-radius:4px;font-size:1rem;font-family:inherit">
-          </label>
-          <label style="display:flex;flex-direction:column;gap:.4rem">
-            <span style="font-family:'Oswald',sans-serif;font-size:.82rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--c-muted)">Email</span>
-            <input type="email" name="email" required style="padding:.85rem 1rem;border:1px solid var(--c-border);border-radius:4px;font-size:1rem;font-family:inherit">
-          </label>
-          <label style="display:flex;flex-direction:column;gap:.4rem">
-            <span style="font-family:'Oswald',sans-serif;font-size:.82rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--c-muted)">Subject</span>
-            <select name="subject" style="padding:.85rem 1rem;border:1px solid var(--c-border);border-radius:4px;font-size:1rem;font-family:inherit;background:#fff">
-              <option>Manuscript submission</option>
-              <option>Press / media inquiry</option>
-              <option>Partnership / business</option>
-              <option>Reader question</option>
-              <option>Other</option>
+        <p>Use the form below to send us a message. We aim to respond within 2 business days.</p>
+        <p class="form-row" style="margin-top:.5rem"><span class="hint">Fields marked <span aria-hidden="true" class="req">*</span> <span class="sr-only">required</span> are required. The form opens your email program; if that doesn't work, write to us at <a href="mailto:info@vugapublishing.com">info@vugapublishing.com</a>.</span></p>
+        <form action="mailto:info@vugapublishing.com" method="post" enctype="text/plain" class="form-grid" data-contact-form novalidate>
+          <div class="form-row">
+            <label for="contact-name">Your Name <span aria-hidden="true" class="req">*</span></label>
+            <input type="text" id="contact-name" name="name" autocomplete="name" required aria-required="true" data-label="Name">
+          </div>
+          <div class="form-row">
+            <label for="contact-email">Email <span aria-hidden="true" class="req">*</span></label>
+            <input type="email" id="contact-email" name="email" autocomplete="email" required aria-required="true" data-label="Email">
+          </div>
+          <div class="form-row">
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" name="subject">
+              <option value="">Choose a topic (optional)</option>
+              <option value="Manuscript submission">Manuscript submission</option>
+              <option value="Press / media inquiry">Press / media inquiry</option>
+              <option value="Partnership / business">Partnership / business</option>
+              <option value="Reader question">Reader question</option>
+              <option value="Other">Other</option>
             </select>
-          </label>
-          <label style="display:flex;flex-direction:column;gap:.4rem">
-            <span style="font-family:'Oswald',sans-serif;font-size:.82rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--c-muted)">Message</span>
-            <textarea name="message" rows="5" required style="padding:.85rem 1rem;border:1px solid var(--c-border);border-radius:4px;font-size:1rem;font-family:inherit;resize:vertical"></textarea>
-          </label>
+          </div>
+          <div class="form-row">
+            <label for="contact-message">Message <span aria-hidden="true" class="req">*</span></label>
+            <textarea id="contact-message" name="message" rows="5" required aria-required="true" data-label="Message"></textarea>
+          </div>
+          <div class="form-status" role="alert" aria-live="polite" tabindex="-1" data-form-status></div>
           <button type="submit" class="btn btn--red btn--lg" style="justify-self:start">Send Message</button>
         </form>
       </div>
@@ -211,7 +214,13 @@
     </div>
     <div class="footer-bottom">
       <div>© 2026 VUGA Publishing. All Rights Reserved. Partner of <a href="https://vugamediagroup.com" rel="noopener" target="_blank">VUGA Media Group</a> &amp; <a href="https://vugaenterprises.com/" rel="noopener" target="_blank">VUGA Enterprises</a>.</div>
-      <div><a href="terms.html">Terms &amp; Conditions</a></div>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="terms.html">Terms</a> ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="cookies.html">Cookies</a> ·
+        <a href="dmca.html">DMCA</a> ·
+        <a href="accessibility.html">Accessibility</a>
+      </nav>
     </div>
   </div>
 </footer>
