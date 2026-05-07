@@ -42,6 +42,17 @@
   </url>
 
   <url>
+    <loc>https://vugapublishing.com/network.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vugapublishing.com/assets/images/brand/logo.png</image:loc>
+      <image:title>VUGA Enterprises Media Network — 104 Outlets</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://vugapublishing.com/books/emma-luke.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -70,6 +81,35 @@
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vugapublishing.com/assets/images/books/law-firm-marketing-bible.png</image:loc>
+      <image:title>The Law Firm Marketing Bible</image:title>
+      <image:caption>Marketing playbook for law firms by VUGA Publishing</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/books/content-marketing-attorney-guide.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vugapublishing.com/assets/images/books/content-marketing-attorney.png</image:loc>
+      <image:title>Content Marketing: The Ultimate Attorney Marketing Guide</image:title>
+      <image:caption>Free ebook on content marketing for attorneys by VUGA Publishing</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://vugapublishing.com/books/story-arc-secrets.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://vugapublishing.com/assets/images/books/story-arc-secrets.png</image:loc>
+      <image:title>Story Arc Secrets — Coming Soon</image:title>
+      <image:caption>Writing craft reference by VUGA Publishing</image:caption>
+    </image:image>
   </url>
 
   <url>
