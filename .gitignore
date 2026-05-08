@@ -5,3 +5,8 @@ Thumbs.db
 .idea/
 .vscode/
 node_modules/
+
+# Per-project AI agent skills (installed via `npx skills add ...`).
+# Contains local symlinks; reproducible on any machine via skills-lock.json.
+.agents/
+.claude/skills/
