@@ -687,3 +687,8 @@ p{margin:0 0 1.1em}
 .blog-card-cover{aspect-ratio:16/9;overflow:hidden;border-radius:var(--radius-lg) var(--radius-lg) 0 0;background:#0a0a0a}
 .blog-card-cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform var(--t-mid)}
 .blog-card:hover .blog-card-cover img{transform:scale(1.04)}
+
+/* Blog inline images (added 2026-05-08) */
+.blog-inline-img{margin:2.5rem -1rem;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.12)}
+.blog-inline-img img{width:100%;height:auto;display:block}
+@media(min-width:780px){.blog-inline-img{margin:3rem 0}}
