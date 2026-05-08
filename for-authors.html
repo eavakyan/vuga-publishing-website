@@ -19,6 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/images/brand/favicon-source.jpg" type="image/jpeg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,17 +61,8 @@
 </script>
 
 <style>
-.problem-band{
-  background:linear-gradient(135deg,#0a0a0a,#1a1a1a);
-  color:#fff;border-radius:var(--radius-lg);
-  padding:clamp(2rem,4vw,3.5rem);
-  margin:0 0 3rem;text-align:center;
-  position:relative;overflow:hidden;
-}
-.problem-band::before{
-  content:"";position:absolute;inset:0;
-  background-image:radial-gradient(circle at 50% 0%, rgba(221,51,51,.18), transparent 60%);
-}
+.problem-band{background:linear-gradient(135deg,#0a0a0a,#1a1a1a);color:#fff;border-radius:var(--radius-lg);padding:clamp(2rem,4vw,3.5rem);margin:0 0 3rem;text-align:center;position:relative;overflow:hidden}
+.problem-band::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 50% 0%, rgba(221,51,51,.18), transparent 60%)}
 .problem-band > *{position:relative;z-index:1}
 .problem-band h2{color:#fff;margin-bottom:1rem;font-size:clamp(1.6rem,3vw,2.4rem)}
 .problem-band p{color:#cfcfcf;font-size:1.08rem;max-width:720px;margin:0 auto 1rem}
@@ -78,46 +70,24 @@
 
 .tier-grid{display:grid;gap:1.5rem;grid-template-columns:1fr;margin-top:2.5rem}
 @media(min-width:880px){.tier-grid{grid-template-columns:repeat(3,1fr);gap:1.4rem;align-items:stretch}}
-.tier{
-  display:flex;flex-direction:column;
-  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);
-  padding:2rem 1.8rem;position:relative;
-  transition:transform var(--t-mid),box-shadow var(--t-mid);
-}
+.tier{display:flex;flex-direction:column;background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:2rem 1.8rem;position:relative;transition:transform var(--t-mid),box-shadow var(--t-mid)}
 .tier:hover{transform:translateY(-4px);box-shadow:var(--c-shadow-lg)}
-.tier--popular{
-  border:2px solid var(--c-red);
-  background:linear-gradient(180deg,#fff,#fff7f7);
-}
-.tier--popular::before{
-  content:"Most Popular";position:absolute;top:-12px;left:50%;transform:translateX(-50%);
-  background:var(--c-red);color:#fff;
-  font-family:'Oswald',sans-serif;font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;
-  padding:.32rem .9rem;border-radius:2px;white-space:nowrap;
-}
+.tier--popular{border:2px solid var(--c-red);background:linear-gradient(180deg,#fff,#fff7f7)}
+.tier--popular::before{content:"Most Popular";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--c-red);color:#fff;font-family:'Oswald',sans-serif;font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;padding:.32rem .9rem;border-radius:2px;white-space:nowrap}
 .tier-name{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:.86rem;color:var(--c-red);margin-bottom:.4rem}
 .tier-tag{font-family:'Oswald',sans-serif;font-size:1.4rem;line-height:1.1;margin-bottom:.8rem;color:var(--c-ink)}
 .tier-price{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:600;line-height:1;color:var(--c-ink);margin:.4rem 0 .2rem}
 .tier-price small{font-size:1rem;color:var(--c-muted);font-weight:400}
 .tier-tagline{font-size:.96rem;color:var(--c-muted);margin-bottom:1.4rem}
 .tier-features{list-style:none;padding:0;margin:1rem 0 1.6rem;flex:1}
-.tier-features li{
-  padding:.6rem 0 .6rem 1.6rem;position:relative;font-size:.96rem;line-height:1.5;
-  border-bottom:1px solid #f0f0f0;
-}
+.tier-features li{padding:.6rem 0 .6rem 1.6rem;position:relative;font-size:.96rem;line-height:1.5;border-bottom:1px solid #f0f0f0}
 .tier-features li:last-child{border-bottom:0}
-.tier-features li::before{
-  content:"";position:absolute;left:0;top:.95rem;width:10px;height:6px;
-  border-left:2px solid var(--c-red);border-bottom:2px solid var(--c-red);
-  transform:rotate(-45deg);
-}
+.tier-features li::before{content:"";position:absolute;left:0;top:.95rem;width:10px;height:6px;border-left:2px solid var(--c-red);border-bottom:2px solid var(--c-red);transform:rotate(-45deg)}
 .tier-features li strong{color:var(--c-ink)}
 .tier .btn{justify-self:stretch;width:100%;justify-content:center;margin-top:auto}
 .tier-meta{font-size:.82rem;color:var(--c-muted);margin-top:.8rem;text-align:center;font-style:italic}
 
-.compare{
-  margin-top:3rem;border:1px solid var(--c-border);border-radius:var(--radius-lg);overflow:hidden;background:#fff;
-}
+.compare{margin-top:3rem;border:1px solid var(--c-border);border-radius:var(--radius-lg);overflow:hidden;background:#fff}
 .compare table{width:100%;border-collapse:collapse;font-size:.94rem}
 .compare th,.compare td{padding:.9rem 1rem;text-align:left;border-bottom:1px solid var(--c-border)}
 .compare th{background:var(--c-bg-alt);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:.84rem;color:var(--c-ink)}
@@ -127,113 +97,38 @@
 .compare .no{color:#bcbcbc}
 @media(max-width:720px){.compare{font-size:.86rem;overflow-x:auto}.compare table{min-width:600px}}
 
-.steps{
-  display:grid;gap:1.4rem;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  margin-top:2.5rem;
-  counter-reset:step;
-}
-.step{
-  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);
-  padding:2rem 1.6rem;position:relative;
-  border-top:4px solid var(--c-red);
-}
-.step::before{
-  counter-increment:step;
-  content:counter(step);
-  position:absolute;top:-22px;left:1.6rem;
-  width:40px;height:40px;border-radius:50%;
-  background:var(--c-red);color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:600;
-}
+.steps{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2.5rem;counter-reset:step}
+.step{background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:2rem 1.6rem;position:relative;border-top:4px solid var(--c-red)}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-22px;left:1.6rem;width:40px;height:40px;border-radius:50%;background:var(--c-red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:600}
 .step h3{margin-top:.6rem;font-size:1rem;letter-spacing:.5px}
 .step p{margin:0;font-size:.94rem;color:var(--c-body)}
 
 .faq{display:grid;gap:1rem;margin-top:2.5rem}
-.faq details{
-  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);
-  padding:1.2rem 1.5rem;cursor:pointer;
-}
-.faq summary{
-  font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.5px;text-transform:none;
-  color:var(--c-ink);font-weight:500;list-style:none;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.faq summary::after{
-  content:"+";font-size:1.6rem;color:var(--c-red);font-weight:300;line-height:1;
-}
+.faq details{background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.2rem 1.5rem;cursor:pointer}
+.faq summary{font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.5px;text-transform:none;color:var(--c-ink);font-weight:500;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:"+";font-size:1.6rem;color:var(--c-red);font-weight:300;line-height:1}
 .faq details[open] summary::after{content:"−"}
 .faq details[open]{box-shadow:var(--c-shadow)}
 .faq details > p{margin-top:1rem;color:var(--c-body)}
 
-.mag-grid{
-  display:grid;gap:1.5rem;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  margin-top:2.5rem;
-}
-.mag{
-  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);
-  padding:1.8rem 1.6rem;border-top:4px solid var(--c-red);
-}
+.mag-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:2.5rem}
+.mag{background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.8rem 1.6rem;border-top:4px solid var(--c-red)}
 .mag-name{font-family:'Oswald',sans-serif;font-size:1.4rem;color:var(--c-ink);text-transform:uppercase;letter-spacing:1px;margin-bottom:.4rem;line-height:1.1}
 .mag-meta{font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--c-red);margin-bottom:.8rem}
 .mag-desc{font-size:.94rem;color:var(--c-body);margin-bottom:1rem;line-height:1.55}
-.mag-stats{
-  display:flex;flex-direction:column;gap:.4rem;
-  font-size:.86rem;color:var(--c-muted);
-  padding-top:.8rem;border-top:1px solid var(--c-border);
-}
+.mag-stats{display:flex;flex-direction:column;gap:.4rem;font-size:.86rem;color:var(--c-muted);padding-top:.8rem;border-top:1px solid var(--c-border)}
 .mag-stats strong{color:var(--c-ink);font-weight:500}
-.mag-tier{
-  display:inline-block;font-family:'Oswald',sans-serif;font-size:.7rem;
-  letter-spacing:1.5px;text-transform:uppercase;
-  padding:.25rem .6rem;border-radius:2px;
-  background:var(--c-bg-alt);color:var(--c-ink);
-  margin-top:.8rem;
-}
+.mag-tier{display:inline-block;font-family:'Oswald',sans-serif;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;padding:.25rem .6rem;border-radius:2px;background:var(--c-bg-alt);color:var(--c-ink);margin-top:.8rem}
 
-/* Premium Add-Ons */
-.addon-grid{
-  display:grid;gap:1.5rem;
-  grid-template-columns:1fr;
-  margin-top:2.5rem;
-}
+.addon-grid{display:grid;gap:1.5rem;grid-template-columns:1fr;margin-top:2.5rem}
 @media(min-width:880px){.addon-grid{grid-template-columns:1fr 1fr 1.2fr;align-items:stretch}}
-.addon{
-  display:flex;flex-direction:column;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:var(--radius-lg);
-  padding:2rem 1.8rem;
-  position:relative;
-  transition:transform var(--t-mid),border-color var(--t-mid);
-}
+.addon{display:flex;flex-direction:column;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-lg);padding:2rem 1.8rem;position:relative;transition:transform var(--t-mid),border-color var(--t-mid)}
 .addon:hover{transform:translateY(-4px);border-color:#dd3333}
-.addon--bundle{
-  background:linear-gradient(180deg,rgba(221,51,51,.12),rgba(221,51,51,.04));
-  border:2px solid #dd3333;
-}
-.addon-tag{
-  display:inline-block;align-self:flex-start;
-  font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:1.8px;text-transform:uppercase;
-  padding:.3rem .65rem;border-radius:2px;
-  background:rgba(255,255,255,.1);color:#fff;
-  margin-bottom:1rem;
-}
-.addon-name{
-  font-family:'Oswald',sans-serif;color:#fff;
-  font-size:2rem;text-transform:uppercase;letter-spacing:2px;line-height:1.05;
-  margin:0 0 .6rem;
-}
-.addon-price{
-  font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:600;color:#fff;
-  line-height:1;margin-bottom:.6rem;
-}
-.addon-desc{
-  font-family:'Oswald',sans-serif;font-size:.84rem;letter-spacing:1.5px;text-transform:uppercase;
-  color:#dd3333;margin-bottom:1rem;
-}
+.addon--bundle{background:linear-gradient(180deg,rgba(221,51,51,.12),rgba(221,51,51,.04));border:2px solid #dd3333}
+.addon-tag{display:inline-block;align-self:flex-start;font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:1.8px;text-transform:uppercase;padding:.3rem .65rem;border-radius:2px;background:rgba(255,255,255,.1);color:#fff;margin-bottom:1rem}
+.addon-name{font-family:'Oswald',sans-serif;color:#fff;font-size:2rem;text-transform:uppercase;letter-spacing:2px;line-height:1.05;margin:0 0 .6rem}
+.addon-price{font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:600;color:#fff;line-height:1;margin-bottom:.6rem}
+.addon-desc{font-family:'Oswald',sans-serif;font-size:.84rem;letter-spacing:1.5px;text-transform:uppercase;color:#dd3333;margin-bottom:1rem}
 .addon-body{font-size:.96rem;color:#cfcfcf;line-height:1.6;flex:1;margin-bottom:1.5rem}
 .addon-body strong{color:#fff}
 .addon .btn{align-self:flex-start;margin-top:auto;background:#fff;color:#0a0a0a;border-color:#fff}
@@ -241,88 +136,33 @@
 .addon .btn--red{background:#dd3333;border-color:#dd3333;color:#fff}
 .addon .btn--red:hover{background:#fff;color:#0a0a0a;border-color:#fff}
 
-.addon-comp{
-  margin-top:3rem;padding:1.8rem clamp(1rem,2.5vw,2rem);
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:var(--radius-lg);
-}
-.addon-comp-row{
-  display:flex;justify-content:space-between;align-items:center;gap:1rem;
-  padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.08);
-  font-size:.94rem;color:#cfcfcf;
-}
+.addon-comp{margin-top:3rem;padding:1.8rem clamp(1rem,2.5vw,2rem);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg)}
+.addon-comp-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.94rem;color:#cfcfcf}
 .addon-comp-row:last-child{border-bottom:0}
 .addon-comp-row--us{color:#fff;background:rgba(221,51,51,.16);margin:.4rem -1rem;padding:.85rem 1rem;border-radius:4px;border:1px solid rgba(221,51,51,.4)}
 .addon-comp-row--us span:last-child{color:#fff}
 @media(max-width:600px){.addon-comp-row{flex-direction:column;align-items:flex-start;gap:.3rem}}
 
-/* Spark Annual — full-width band below tier grid */
-.annual-band{
-  margin:2.5rem 0 0;padding:clamp(1.6rem,3vw,2.4rem);
-  background:linear-gradient(135deg,#fff7f7,#ffeaea);
-  border:2px solid var(--c-red);border-radius:var(--radius-lg);
-  display:grid;grid-template-columns:1fr;gap:1.8rem;align-items:center;
-}
+.annual-band{margin:2.5rem 0 0;padding:clamp(1.6rem,3vw,2.4rem);background:linear-gradient(135deg,#fff7f7,#ffeaea);border:2px solid var(--c-red);border-radius:var(--radius-lg);display:grid;grid-template-columns:1fr;gap:1.8rem;align-items:center}
 @media(min-width:880px){.annual-band{grid-template-columns:1.6fr 1fr;gap:2.4rem}}
-.annual-band-left h3{
-  font-family:'Oswald',sans-serif;font-size:clamp(1.4rem,2.6vw,2rem);
-  letter-spacing:.5px;line-height:1.15;margin:.6rem 0 1rem;color:var(--c-ink);
-}
-.annual-band-left p{
-  margin:0 0 .8rem;font-size:.98rem;line-height:1.6;color:var(--c-body);
-}
+.annual-band-left h3{font-family:'Oswald',sans-serif;font-size:clamp(1.4rem,2.6vw,2rem);letter-spacing:.5px;line-height:1.15;margin:.6rem 0 1rem;color:var(--c-ink)}
+.annual-band-left p{margin:0 0 .8rem;font-size:.98rem;line-height:1.6;color:var(--c-body)}
 .annual-band-left p strong{color:var(--c-ink)}
-.annual-tag{
-  display:inline-block;font-family:'Oswald',sans-serif;font-size:.74rem;letter-spacing:1.8px;text-transform:uppercase;
-  background:var(--c-red);color:#fff;padding:.34rem .8rem;border-radius:2px;
-}
-.annual-reward{
-  background:#fff;border-left:3px solid var(--c-red);
-  padding:.9rem 1rem;border-radius:0 4px 4px 0;
-  font-size:.94rem !important;
-}
-.annual-total{
-  font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.5px;
-  color:var(--c-red) !important;margin-top:1rem !important;
-}
-.annual-band-right{
-  text-align:center;background:#fff;
-  padding:1.6rem 1.4rem;border-radius:var(--radius-lg);
-  border:1px solid rgba(221,51,51,.25);
-}
-.annual-price-big{
-  font-family:'Oswald',sans-serif;font-size:3rem;font-weight:600;line-height:1;
-  color:var(--c-ink);margin-bottom:.2rem;
-}
+.annual-tag{display:inline-block;font-family:'Oswald',sans-serif;font-size:.74rem;letter-spacing:1.8px;text-transform:uppercase;background:var(--c-red);color:#fff;padding:.34rem .8rem;border-radius:2px}
+.annual-reward{background:#fff;border-left:3px solid var(--c-red);padding:.9rem 1rem;border-radius:0 4px 4px 0;font-size:.94rem !important}
+.annual-total{font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.5px;color:var(--c-red) !important;margin-top:1rem !important}
+.annual-band-right{text-align:center;background:#fff;padding:1.6rem 1.4rem;border-radius:var(--radius-lg);border:1px solid rgba(221,51,51,.25)}
+.annual-price-big{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:600;line-height:1;color:var(--c-ink);margin-bottom:.2rem}
 .annual-price-big small{font-size:1rem;color:var(--c-muted);font-weight:400}
-.annual-strike-big{
-  font-size:.92rem;color:var(--c-muted);text-decoration:line-through;
-  margin-bottom:1.2rem;
-}
+.annual-strike-big{font-size:.92rem;color:var(--c-muted);text-decoration:line-through;margin-bottom:1.2rem}
 .annual-band-right .btn{width:100%;justify-content:center;margin-bottom:1rem}
-.annual-warning{
-  font-size:.78rem;color:var(--c-muted);line-height:1.5;margin:0;text-align:left;
-  padding-top:.8rem;border-top:1px solid rgba(0,0,0,.08);
-}
+.annual-warning{font-size:.78rem;color:var(--c-muted);line-height:1.5;margin:0;text-align:left;padding-top:.8rem;border-top:1px solid rgba(0,0,0,.08)}
 .annual-warning strong{color:var(--c-ink)}
 
-/* Trial banner — single $1 / low-cost placement to remove fear */
-.trial-band{
-  margin:0 0 2rem;padding:1.6rem clamp(1.2rem,2.4vw,2rem);
-  background:linear-gradient(135deg,#fff7f7,#ffeaea);
-  border:2px solid var(--c-red);border-radius:var(--radius-lg);
-  display:grid;grid-template-columns:1fr;gap:1.2rem;align-items:center;
-}
+.trial-band{margin:0 0 2rem;padding:1.6rem clamp(1.2rem,2.4vw,2rem);background:linear-gradient(135deg,#fff7f7,#ffeaea);border:2px solid var(--c-red);border-radius:var(--radius-lg);display:grid;grid-template-columns:1fr;gap:1.2rem;align-items:center}
 @media(min-width:780px){.trial-band{grid-template-columns:1fr auto;gap:2rem}}
-.trial-band .trial-tag{
-  display:inline-block;font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
-  background:var(--c-red);color:#fff;padding:.3rem .7rem;border-radius:2px;margin-bottom:.6rem;
-}
-.trial-band h3{
-  font-family:'Oswald',sans-serif;font-size:clamp(1.4rem,2.4vw,1.9rem);
-  letter-spacing:.5px;margin:0 0 .4rem;color:var(--c-ink);line-height:1.15;
-}
+.trial-band .trial-tag{display:inline-block;font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;background:var(--c-red);color:#fff;padding:.3rem .7rem;border-radius:2px;margin-bottom:.6rem}
+.trial-band h3{font-family:'Oswald',sans-serif;font-size:clamp(1.4rem,2.4vw,1.9rem);letter-spacing:.5px;margin:0 0 .4rem;color:var(--c-ink);line-height:1.15}
 .trial-band p{margin:0;color:var(--c-body);font-size:.96rem;line-height:1.55}
 .trial-band p strong{color:var(--c-ink)}
 .trial-band .trial-cta{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem}
@@ -331,56 +171,21 @@
 .trial-band .trial-price small{font-size:.86rem;color:var(--c-muted);font-weight:400;display:block;margin-top:.2rem}
 .trial-band .btn{margin-top:.4rem;white-space:nowrap}
 
-/* Editorial article vs press release */
-.editorial-vs{
-  margin:3rem 0 0;padding:clamp(1.6rem,3vw,2.6rem);
-  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);
-}
-.editorial-vs h3{
-  font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,2.6vw,2rem);
-  text-align:center;margin:0 0 .6rem;letter-spacing:.5px;line-height:1.15;
-}
+.editorial-vs{margin:3rem 0 0;padding:clamp(1.6rem,3vw,2.6rem);background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg)}
+.editorial-vs h3{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,2.6vw,2rem);text-align:center;margin:0 0 .6rem;letter-spacing:.5px;line-height:1.15}
 .editorial-vs > p{text-align:center;color:var(--c-muted);max-width:680px;margin:0 auto 2rem;font-size:1rem;line-height:1.55}
 .ev-grid{display:grid;grid-template-columns:1fr;gap:1.4rem}
 @media(min-width:780px){.ev-grid{grid-template-columns:1fr 1fr}}
-.ev-card{
-  border:1px solid var(--c-border);border-radius:var(--radius-lg);
-  padding:1.6rem 1.5rem;background:var(--c-bg-alt);
-}
-.ev-card--us{
-  background:linear-gradient(180deg,#fff,#fff7f7);
-  border:2px solid var(--c-red);
-  position:relative;
-}
-.ev-card--us::before{
-  content:"What VUGA does";
-  position:absolute;top:-12px;left:1.4rem;
-  background:var(--c-red);color:#fff;
-  font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:1.6px;text-transform:uppercase;
-  padding:.3rem .7rem;border-radius:2px;
-}
-.ev-card h4{
-  font-family:'Oswald',sans-serif;font-size:1.3rem;letter-spacing:.5px;text-transform:uppercase;
-  margin:0 0 1rem;color:var(--c-ink);line-height:1.1;
-}
+.ev-card{border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.6rem 1.5rem;background:var(--c-bg-alt)}
+.ev-card--us{background:linear-gradient(180deg,#fff,#fff7f7);border:2px solid var(--c-red);position:relative}
+.ev-card--us::before{content:"What VUGA does";position:absolute;top:-12px;left:1.4rem;background:var(--c-red);color:#fff;font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:1.6px;text-transform:uppercase;padding:.3rem .7rem;border-radius:2px}
+.ev-card h4{font-family:'Oswald',sans-serif;font-size:1.3rem;letter-spacing:.5px;text-transform:uppercase;margin:0 0 1rem;color:var(--c-ink);line-height:1.1}
 .ev-card ul{list-style:none;padding:0;margin:0}
-.ev-card li{
-  padding:.55rem 0 .55rem 1.7rem;position:relative;font-size:.94rem;line-height:1.5;
-  color:var(--c-body);border-bottom:1px solid rgba(0,0,0,.06);
-}
+.ev-card li{padding:.55rem 0 .55rem 1.7rem;position:relative;font-size:.94rem;line-height:1.5;color:var(--c-body);border-bottom:1px solid rgba(0,0,0,.06)}
 .ev-card li:last-child{border-bottom:0}
 .ev-card li strong{color:var(--c-ink)}
-.ev-card--bad li::before{
-  content:"✕";position:absolute;left:0;top:.5rem;
-  width:18px;height:18px;border-radius:50%;
-  background:#e0e0e0;color:#888;font-size:.78rem;font-weight:700;
-  display:flex;align-items:center;justify-content:center;
-}
-.ev-card--us li::before{
-  content:"";position:absolute;left:0;top:.85rem;width:10px;height:6px;
-  border-left:2px solid var(--c-red);border-bottom:2px solid var(--c-red);
-  transform:rotate(-45deg);
-}
+.ev-card--bad li::before{content:"✕";position:absolute;left:0;top:.5rem;width:18px;height:18px;border-radius:50%;background:#e0e0e0;color:#888;font-size:.78rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.ev-card--us li::before{content:"";position:absolute;left:0;top:.85rem;width:10px;height:6px;border-left:2px solid var(--c-red);border-bottom:2px solid var(--c-red);transform:rotate(-45deg)}
 </style>
 </head>
 <body>
@@ -423,7 +228,7 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:0;margin-top:-3rem;position:relative;z-index:2">
+  <section class="section" id="tiers" style="padding-top:0;margin-top:-3rem;position:relative;z-index:2">
     <div class="container">
 
       <div class="problem-band">
@@ -502,7 +307,7 @@
           </ul>
           <div style="display:flex;flex-direction:column;gap:.5rem;width:100%">
             <a href="https://buy.stripe.com/00w28r9VgdEP5JM4RxcV203" class="btn">Buy Authority — $14,997</a>
-            <a href="mailto:info@vugapublishing.com?subject=Authority%20Tier%20%E2%80%94%20Schedule%20a%20Call" class="btn btn--ghost" style="font-size:.82rem;padding:.7rem 1.2rem">Or Schedule a Call First</a>
+            <a href="mailto:info@vugapublishing.com?subject=Authority%20Package%20Call" class="btn btn--ghost" style="font-size:.82rem;padding:.7rem 1.2rem">Or Schedule a Call First</a>
           </div>
           <div class="tier-meta">Maximum reach. Optional intro call available.</div>
         </div>
@@ -606,7 +411,7 @@
           <p class="addon-body" style="margin-top:.8rem">Now: your book. Full editorial article on time.com — guaranteed by contract. <strong style="color:#fff">Indie authors don't get into TIME. Period. Until now.</strong></p>
           <div style="display:flex;flex-direction:column;gap:.5rem;width:100%">
             <a href="https://buy.stripe.com/dRm00j4AW7gra02es7cV204" class="btn">Buy TIME Add-On</a>
-            <a href="mailto:info@vugapublishing.com?subject=TIME%20Add-On%20%E2%80%94%20Schedule%20a%20Call" style="font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#cfcfcf;text-align:center;padding:.5rem;text-decoration:underline">Or Schedule a Call</a>
+            <a href="mailto:info@vugapublishing.com?subject=TIME%20Add-On%20Call" style="font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#cfcfcf;text-align:center;padding:.5rem;text-decoration:underline">Or Schedule a Call</a>
           </div>
         </div>
 
@@ -618,7 +423,7 @@
           <p class="addon-body">The world's most iconic music, culture, and entertainment magazine — established 1967. Featured editorial article on rollingstone.co.uk, guaranteed by contract.</p>
           <div style="display:flex;flex-direction:column;gap:.5rem;width:100%">
             <a href="https://buy.stripe.com/eVq28r3wSfMXa023NtcV205" class="btn">Buy Rolling Stone UK Add-On</a>
-            <a href="mailto:info@vugapublishing.com?subject=Rolling%20Stone%20UK%20Add-On%20%E2%80%94%20Schedule%20a%20Call" style="font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#cfcfcf;text-align:center;padding:.5rem;text-decoration:underline">Or Schedule a Call</a>
+            <a href="mailto:info@vugapublishing.com?subject=Rolling%20Stone%20UK%20Call" style="font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#cfcfcf;text-align:center;padding:.5rem;text-decoration:underline">Or Schedule a Call</a>
           </div>
         </div>
 
@@ -630,7 +435,7 @@
           <p class="addon-body">Stack onto Authority — total spend $34,994 delivers <strong>TIME + Rolling Stone UK + Closer Weekly + In Touch Weekly + Star Magazine + OK! Magazine + Hollywood Life</strong> + the 10-outlet VUGA network. The most complete press campaign available to any indie author, anywhere.</p>
           <div style="display:flex;flex-direction:column;gap:.5rem;width:100%">
             <a href="https://buy.stripe.com/5kQ28r7N89ozfkm97NcV206" class="btn btn--red">Buy Bundle — $19,997</a>
-            <a href="mailto:info@vugapublishing.com?subject=Bundle%20%E2%80%94%20Schedule%20a%20Call" style="font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#cfcfcf;text-align:center;padding:.5rem;text-decoration:underline">Or Schedule a Call</a>
+            <a href="mailto:info@vugapublishing.com?subject=Premium%20Bundle%20Call" style="font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#cfcfcf;text-align:center;padding:.5rem;text-decoration:underline">Or Schedule a Call</a>
           </div>
         </div>
       </div>
@@ -864,8 +669,8 @@
       <h2 style="color:#fff">Ready to be in the magazines?</h2>
       <p class="lede" style="color:#cfcfcf;max-width:680px;margin:0 auto 2rem">Three tiers. One form. Real articles in real magazines. No calls.</p>
       <div class="flex-wrap-cta" style="justify-content:center">
-        <a href="#tiers" class="btn btn--red btn--lg" onclick="document.querySelector('.tier-grid').scrollIntoView({behavior:'smooth'});return false;">See Packages</a>
-        <a href="mailto:info@vugapublishing.com?subject=Author%20Package%20Question" class="btn btn--ghost btn--lg" style="color:#fff;border-color:#fff">Email a Question</a>
+        <a href="#tiers" class="btn btn--red btn--lg">See Packages</a>
+        <a href="mailto:info@vugapublishing.com?subject=Author%20Question" class="btn btn--ghost btn--lg" style="color:#fff;border-color:#fff">Email a Question</a>
       </div>
     </div>
   </section>
@@ -885,7 +690,7 @@
         </div>
       </div>
       <div class="footer-col"><h4>Discover</h4><ul><li><a href="index.html">Home</a></li><li><a href="our-story.html">Our Story</a></li><li><a href="catalog.html">Catalog</a></li><li><a href="for-authors.html">For Authors</a></li><li><a href="network.html">The Network</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Featured Books</h4><ul><li><a href="books/emma-luke.html">Emma + Luke</a></li><li><a href="books/how-trump-played-the-media.html">How Trump Played the Media</a></li><li><a href="books/content-marketing-attorney-guide.html">Content Marketing for Attorneys</a></li></ul></div>
+      <div class="footer-col"><h4>Featured Books</h4><ul><li><a href="books/emma-luke.html">Emma + Luke</a></li><li><a href="books/how-trump-played-the-media.html">How Trump Played the Media</a></li><li><a href="books/law-firm-marketing-bible.html">Law Firm Marketing Bible</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@vugapublishing.com">info@vugapublishing.com</a></li><li><a href="tel:+18339008842">1 (833) 900-8842</a></li><li><a href="https://vugaprservices.com" rel="noopener" target="_blank">VUGA PR Services</a></li><li><a href="https://vugamediagroup.com" rel="noopener" target="_blank">VUGA Media Group</a></li><li><a href="https://vugaenterprises.com/" rel="noopener" target="_blank">VUGA Enterprises</a></li></ul></div>
     </div>
     <div class="footer-bottom">

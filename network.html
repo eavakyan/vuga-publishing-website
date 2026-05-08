@@ -19,6 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/images/brand/favicon-source.jpg" type="image/jpeg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -44,105 +45,45 @@
 </script>
 
 <style>
-.stats-row{
-  display:grid;gap:1rem;grid-template-columns:repeat(2,1fr);margin-top:2rem;
-}
+.stats-row{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr);margin-top:2rem}
 @media(min-width:720px){.stats-row{grid-template-columns:repeat(4,1fr)}}
-.stat{
-  background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);
-  padding:1.6rem 1.4rem;text-align:center;border-top:4px solid var(--c-red);
-}
+.stat{background:#fff;border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.6rem 1.4rem;text-align:center;border-top:4px solid var(--c-red)}
 .stat-num{font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:600;color:var(--c-ink);line-height:1}
 .stat-lbl{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1.5px;font-size:.78rem;color:var(--c-muted);margin-top:.5rem}
 
-.outlet-toolbar{
-  display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:2.5rem 0 1.5rem;
-}
-.tab{
-  font-family:'Oswald',sans-serif;font-size:.84rem;text-transform:uppercase;letter-spacing:1.5px;
-  padding:.7rem 1.3rem;border:1px solid var(--c-border);background:#fff;color:var(--c-ink);
-  cursor:pointer;border-radius:2px;transition:all var(--t-fast);
-}
+.outlet-toolbar{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:2.5rem 0 1.5rem}
+.tab{font-family:'Oswald',sans-serif;font-size:.84rem;text-transform:uppercase;letter-spacing:1.5px;padding:.7rem 1.3rem;border:1px solid var(--c-border);background:#fff;color:var(--c-ink);cursor:pointer;border-radius:2px;transition:all var(--t-fast)}
 .tab:hover{border-color:var(--c-red);color:var(--c-red)}
 .tab.active{background:var(--c-black);color:#fff;border-color:var(--c-black)}
 
-.outlet-search{
-  width:100%;max-width:480px;display:block;margin:0 auto 1.5rem;
-  padding:.85rem 1.1rem;border:1px solid var(--c-border);border-radius:var(--radius);
-  font-size:1rem;font-family:inherit;
-}
+.outlet-search{width:100%;max-width:480px;display:block;margin:0 auto 1.5rem;padding:.85rem 1.1rem;border:1px solid var(--c-border);border-radius:var(--radius);font-size:1rem;font-family:inherit}
 .outlet-search:focus{outline:none;border-color:var(--c-red);box-shadow:0 0 0 3px rgba(221,51,51,.12)}
 
-.outlet-grid{
-  display:grid;gap:.75rem;
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-}
-.outlet{
-  display:flex;align-items:flex-start;gap:.8rem;
-  padding:.85rem 1rem;background:#fff;
-  border:1px solid var(--c-border);border-radius:var(--radius);
-  transition:all var(--t-fast);
-  text-decoration:none;color:var(--c-ink);
-}
+.outlet-grid{display:grid;gap:.75rem;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.outlet{display:flex;align-items:flex-start;gap:.8rem;padding:.85rem 1rem;background:#fff;border:1px solid var(--c-border);border-radius:var(--radius);transition:all var(--t-fast);text-decoration:none;color:var(--c-ink)}
 .outlet:hover{border-color:var(--c-red);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.06)}
-.outlet-icon{
-  flex-shrink:0;width:36px;height:36px;border-radius:50%;
-  background:linear-gradient(135deg,var(--c-red),#a82020);
-  display:flex;align-items:center;justify-content:center;
-  color:#fff;font-family:'Oswald',sans-serif;font-size:.84rem;font-weight:600;
-}
+.outlet-icon{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--c-red),#a82020);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Oswald',sans-serif;font-size:.84rem;font-weight:600}
 .outlet-meta{flex:1;min-width:0}
 .outlet-name{font-weight:600;font-size:.94rem;color:var(--c-ink);line-height:1.3;display:block;margin-bottom:.15rem}
 .outlet-url{font-size:.78rem;color:var(--c-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
-.outlet-cat{
-  display:inline-block;font-family:'Oswald',sans-serif;font-size:.66rem;
-  letter-spacing:1px;text-transform:uppercase;color:#fff;
-  padding:.18rem .45rem;border-radius:2px;margin-top:.3rem;
-}
+.outlet-cat{display:inline-block;font-family:'Oswald',sans-serif;font-size:.66rem;letter-spacing:1px;text-transform:uppercase;color:#fff;padding:.18rem .45rem;border-radius:2px;margin-top:.3rem}
 .outlet-cat--tv{background:#9c27b0}
 .outlet-cat--news{background:#1976d2}
 .outlet-cat--mag{background:var(--c-red)}
 
-/* Premium outlet styling — Gossip Stone TV, 24Fashion TV are NOT included in standard packages */
-.outlet--premium{
-  border:2px solid #d4a017;
-  background:linear-gradient(180deg,#fffaf0,#fff7e6);
-  position:relative;
-}
+.outlet--premium{border:2px solid #d4a017;background:linear-gradient(180deg,#fffaf0,#fff7e6);position:relative}
 .outlet--premium:hover{border-color:#c79513;box-shadow:0 6px 16px rgba(212,160,23,.18)}
-.outlet--premium .outlet-icon{
-  background:linear-gradient(135deg,#d4a017,#a8800f);
-}
-.outlet-cat--premium{
-  background:#d4a017;color:#fff;font-weight:700;
-}
+.outlet--premium .outlet-icon{background:linear-gradient(135deg,#d4a017,#a8800f)}
+.outlet-cat--premium{background:#d4a017;color:#fff;font-weight:700}
 
-/* Premium notice band above outlet grid */
-.premium-notice{
-  margin:0 0 1.4rem;padding:1.2rem 1.4rem;
-  background:linear-gradient(135deg,#fff7e6,#fff2d6);
-  border:2px solid #d4a017;border-radius:var(--radius-lg);
-  display:flex;gap:1rem;align-items:flex-start;
-}
-.premium-notice-icon{
-  flex-shrink:0;width:36px;height:36px;border-radius:50%;
-  background:#d4a017;color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;
-}
+.premium-notice{margin:0 0 1.4rem;padding:1.2rem 1.4rem;background:linear-gradient(135deg,#fff7e6,#fff2d6);border:2px solid #d4a017;border-radius:var(--radius-lg);display:flex;gap:1rem;align-items:flex-start}
+.premium-notice-icon{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#d4a017;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700}
 .premium-notice-text{flex:1;font-size:.94rem;line-height:1.55;color:var(--c-ink)}
 .premium-notice-text strong{color:#a8800f}
 .premium-notice-text a{color:#a8800f;text-decoration:underline;font-weight:600}
 
-.section-divider{
-  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:3px;font-size:.92rem;
-  color:var(--c-red);text-align:center;margin:3rem 0 1.5rem;
-  display:flex;align-items:center;gap:1rem;
-}
-.section-divider::before,.section-divider::after{
-  content:"";flex:1;height:1px;background:var(--c-border);
-}
-
+.section-divider{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:3px;font-size:.92rem;color:var(--c-red);text-align:center;margin:3rem 0 1.5rem;display:flex;align-items:center;gap:1rem}
+.section-divider::before,.section-divider::after{content:"";flex:1;height:1px;background:var(--c-border)}
 .empty{text-align:center;color:var(--c-muted);padding:3rem 1rem;display:none}
 </style>
 </head>
@@ -190,22 +131,10 @@
     <div class="container">
 
       <div class="stats-row">
-        <div class="stat">
-          <div class="stat-num">104</div>
-          <div class="stat-lbl">Total Outlets</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">65M+</div>
-          <div class="stat-lbl">Monthly Readers</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">100M+</div>
-          <div class="stat-lbl">Page Views/Mo</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">27</div>
-          <div class="stat-lbl">Topic Verticals</div>
-        </div>
+        <div class="stat"><div class="stat-num">104</div><div class="stat-lbl">Total Outlets</div></div>
+        <div class="stat"><div class="stat-num">65M+</div><div class="stat-lbl">Monthly Readers</div></div>
+        <div class="stat"><div class="stat-num">100M+</div><div class="stat-lbl">Page Views/Mo</div></div>
+        <div class="stat"><div class="stat-num">27</div><div class="stat-lbl">Topic Verticals</div></div>
       </div>
 
       <div class="outlet-toolbar" aria-label="Outlet category filter" role="group">
@@ -225,9 +154,7 @@
       </div>
 
       <div class="outlet-grid" id="outlet-grid">
-        <!-- Outlets will be initialized below; pre-rendered for SEO -->
-
-        <!-- TELEVISION — PREMIUM ADD-ONS, NOT INCLUDED IN STANDARD PACKAGES -->
+        <!-- TELEVISION — PREMIUM ADD-ONS -->
         <a class="outlet outlet--premium" data-cat="tv" href="https://gossip-stone.com" rel="noopener" target="_blank"><div class="outlet-icon">GS</div><div class="outlet-meta"><span class="outlet-name">Gossip Stone TV</span><span class="outlet-url">gossip-stone.com</span><span class="outlet-cat outlet-cat--premium">★ Premium · Add-On</span></div></a>
         <a class="outlet outlet--premium" data-cat="tv" href="https://24fashion.tv" rel="noopener" target="_blank"><div class="outlet-icon">24</div><div class="outlet-meta"><span class="outlet-name">24Fashion TV</span><span class="outlet-url">24fashion.tv</span><span class="outlet-cat outlet-cat--premium">★ Premium · Add-On</span></div></a>
 
@@ -350,7 +277,7 @@
       <p class="lede" style="color:#cfcfcf;max-width:680px;margin:0 auto 2rem">Self-service author packages from $497. Get full editorial articles in Closer Weekly, In Touch Weekly, Star Magazine, OK! Magazine, and across the network above — guaranteed by contract.</p>
       <div class="flex-wrap-cta" style="justify-content:center">
         <a href="for-authors.html" class="btn btn--red btn--lg">See Author Packages</a>
-        <a href="mailto:info@vugapublishing.com?subject=Author%20Package%20Question" class="btn btn--ghost btn--lg" style="color:#fff;border-color:#fff">Email a Question</a>
+        <a href="mailto:info@vugapublishing.com?subject=Network%20Question" class="btn btn--ghost btn--lg" style="color:#fff;border-color:#fff">Email a Question</a>
       </div>
     </div>
   </section>
@@ -370,7 +297,7 @@
         </div>
       </div>
       <div class="footer-col"><h4>Discover</h4><ul><li><a href="index.html">Home</a></li><li><a href="our-story.html">Our Story</a></li><li><a href="catalog.html">Catalog</a></li><li><a href="for-authors.html">For Authors</a></li><li><a href="network.html">The Network</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Featured Books</h4><ul><li><a href="books/emma-luke.html">Emma + Luke</a></li><li><a href="books/how-trump-played-the-media.html">How Trump Played the Media</a></li><li><a href="books/content-marketing-attorney-guide.html">Content Marketing for Attorneys</a></li></ul></div>
+      <div class="footer-col"><h4>Featured Books</h4><ul><li><a href="books/emma-luke.html">Emma + Luke</a></li><li><a href="books/how-trump-played-the-media.html">How Trump Played the Media</a></li><li><a href="books/law-firm-marketing-bible.html">Law Firm Marketing Bible</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@vugapublishing.com">info@vugapublishing.com</a></li><li><a href="tel:+18339008842">1 (833) 900-8842</a></li><li><a href="https://vugaprservices.com" rel="noopener" target="_blank">VUGA PR Services</a></li>
           <li><a href="https://vugamediagroup.com" rel="noopener" target="_blank">VUGA Media Group</a></li><li><a href="https://vugaenterprises.com/" rel="noopener" target="_blank">VUGA Enterprises</a></li></ul></div>
     </div>
