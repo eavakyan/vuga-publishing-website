@@ -677,22 +677,31 @@ p{margin:0 0 1.1em}
 
 /* === Author card (book detail page) === */
 .author-card{
-  display:grid;gap:clamp(1.5rem,3vw,2.5rem);
-  grid-template-columns:240px 1fr;
-  align-items:start;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.5rem;
+  align-items:flex-start;
   background:#fff;
   border:1px solid var(--c-border);
   border-radius:var(--radius-lg);
   padding:clamp(1.5rem,3vw,2.5rem);
 }
-.author-photo img{
-  width:100%;height:auto;
-  border-radius:var(--radius-md,8px);
-  display:block;
+.author-card > div:last-child{flex:1;min-width:260px}
+.author-photo{
+  flex:0 0 140px;
+  width:140px;
 }
-@media (max-width:680px){
-  .author-card{grid-template-columns:1fr;text-align:left}
-  .author-photo{max-width:240px;margin:0 auto}
+.author-photo img{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  box-shadow:0 8px 16px -8px rgba(0,0,0,.2);
+}
+@media (max-width:520px){
+  .author-photo{flex:0 0 110px;width:110px}
+  .author-photo img{width:110px;height:110px}
 }
 
 /* === 3-column grid for at-a-glance / feature blocks === */
