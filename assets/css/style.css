@@ -668,3 +668,42 @@ p{margin:0 0 1.1em}
 .blog-inline-img{margin:2.5rem -1rem;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.12)}
 .blog-inline-img img{width:100%;height:auto;display:block}
 @media(min-width:780px){.blog-inline-img{margin:3rem 0}}
+
+/* === Coming Soon book card variant === */
+.book-card--soon{border-color:#d4a942}
+.book-card--soon .book-card-cover{
+  background:linear-gradient(135deg, #f7f0e0, #ebd9b3);
+}
+
+/* === Author card (book detail page) === */
+.author-card{
+  display:grid;gap:clamp(1.5rem,3vw,2.5rem);
+  grid-template-columns:240px 1fr;
+  align-items:start;
+  background:#fff;
+  border:1px solid var(--c-border);
+  border-radius:var(--radius-lg);
+  padding:clamp(1.5rem,3vw,2.5rem);
+}
+.author-photo img{
+  width:100%;height:auto;
+  border-radius:var(--radius-md,8px);
+  display:block;
+}
+@media (max-width:680px){
+  .author-card{grid-template-columns:1fr;text-align:left}
+  .author-photo{max-width:240px;margin:0 auto}
+}
+
+/* === 3-column grid for at-a-glance / feature blocks === */
+.grid-3{
+  display:grid;gap:clamp(1.5rem,3vw,2.5rem);
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+.grid-3 h3{
+  font-size:1.05rem;letter-spacing:.5px;
+  margin-bottom:.4rem;
+}
+
+/* === Book cover wrap relative for badge === */
+.book-cover-wrap{position:relative}

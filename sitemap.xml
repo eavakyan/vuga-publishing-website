@@ -172,6 +172,18 @@
 
 
   <url>
+    <loc>https://vugapublishing.com/books/murder-at-the-mariposa-tea-shop.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://vugapublishing.com/assets/images/books/mariposa-tea-shop-cover.jpg</image:loc>
+      <image:title>Murder at the Mariposa Tea Shop</image:title>
+      <image:caption>A cozy culinary mystery by Petronella Locke — Book 1 of A Monarch Cove Mystery</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://vugapublishing.com/books/emma-luke.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
