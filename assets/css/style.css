@@ -707,3 +707,23 @@ p{margin:0 0 1.1em}
 
 /* === Book cover wrap relative for badge === */
 .book-cover-wrap{position:relative}
+
+/* === Compact book cover (for "Coming Soon" / preview pages) === */
+.book-cover-wrap--compact{
+  padding:0;
+  max-width:300px;
+  margin:0 auto 1.5rem;
+  position:relative;
+}
+.book-cover-wrap--compact img{
+  max-height:420px;
+  width:100%;
+  height:auto;
+  transform:none;
+}
+.book-cover-wrap--compact img:hover{transform:translateY(-2px)}
+@media(min-width:900px){
+  .book-cover-wrap--compact{max-width:280px;margin:0;align-self:start}
+  .book-cover-wrap--compact img{max-height:380px}
+  .book-detail:has(.book-cover-wrap--compact){grid-template-columns:280px 1fr;gap:clamp(2rem,4vw,3.5rem)}
+}
