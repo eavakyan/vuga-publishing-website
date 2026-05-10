@@ -736,3 +736,41 @@ p{margin:0 0 1.1em}
   .book-cover-wrap--compact img{max-height:380px}
   .book-detail:has(.book-cover-wrap--compact){grid-template-columns:280px 1fr;gap:clamp(2rem,4vw,3.5rem)}
 }
+
+/* === Related Articles section (blog posts) === */
+.related-grid{
+  display:grid;gap:clamp(1rem,2.5vw,2rem);
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+.related-card{
+  display:flex;flex-direction:column;
+  background:#fff;
+  border:1px solid var(--c-border);
+  border-radius:var(--radius-md,8px);
+  overflow:hidden;
+  text-decoration:none;color:inherit;
+  transition:transform var(--t-mid),box-shadow var(--t-mid);
+}
+.related-card:hover{transform:translateY(-4px);box-shadow:var(--c-shadow-lg)}
+.related-card-cover{
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#f4f1ec;
+}
+.related-card-cover img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform var(--t-mid);
+}
+.related-card:hover .related-card-cover img{transform:scale(1.04)}
+.related-card-body{
+  padding:1.1rem 1.2rem 1.3rem;
+  display:flex;flex-direction:column;flex:1;
+}
+.related-card-body h4{
+  font-size:1.05rem;line-height:1.3;margin-bottom:.45rem;color:var(--c-ink);
+  font-family:'Oswald',sans-serif;font-weight:500;
+}
+.related-card-body p{
+  font-size:.88rem;color:var(--c-muted);margin:0;line-height:1.5;
+}
