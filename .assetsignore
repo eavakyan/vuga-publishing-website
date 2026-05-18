@@ -1,0 +1,34 @@
+# Cloudflare Pages — files excluded from the deployed asset bundle.
+# Same syntax as .gitignore. Lives in the build output directory (repo root).
+# Workers Static Assets hard limit: 25 MiB per individual file.
+
+# Version control
+.git
+.git/**
+.gitignore
+.github
+.assetsignore
+
+# OS / editor junk
+.DS_Store
+*.swp
+Thumbs.db
+
+# Private agent / tooling config (not for public CDN)
+.claude
+.agents
+skills-lock.json
+
+# Project docs (not meant to be served)
+CLAUDE.md
+README.md
+TODO.md
+CHANGELOG.md
+
+# Build-source / archive folders (defensive — none currently exist,
+# but excluded so future additions don't accidentally ship)
+_build
+_archive
+_archive*
+src
+node_modules
