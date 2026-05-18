@@ -10,3 +10,10 @@ node_modules/
 # Contains local symlinks; reproducible on any machine via skills-lock.json.
 .agents/
 .claude/skills/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
